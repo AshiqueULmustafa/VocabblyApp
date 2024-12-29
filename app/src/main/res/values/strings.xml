@@ -2,4 +2,7 @@
     <string name="app_name">Vocabbly App</string>
     <string name="splash_screen_motto">Building Vocabulary One Word \nAt A Time</string>
     <string name="splash_screen_title">Vocabbly</string>
+    <string name="gre_card_title">Practice Words for GRE</string>
+    <string name="Toefl_card_title">Practice Words for TOEFL or IELTS</string>
+    <string name="basic_card_title">Practice Basic Words</string>
 </resources>
