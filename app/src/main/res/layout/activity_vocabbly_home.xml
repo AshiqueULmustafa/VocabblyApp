@@ -21,18 +21,23 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/gre_card"
+
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="16dp"
         android:elevation="4dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/ripple"
         android:padding="8dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:focusable="true"
+
             android:orientation="vertical"
-            android:clickable="true">
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -51,14 +56,18 @@
         android:layout_height="100dp"
         android:layout_margin="16dp"
         android:elevation="4dp"
+        android:background="@drawable/ripple"
+        android:clickable="true"
+
+        android:focusable="true"
         android:padding="8dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:focusable="true"
+
             android:orientation="vertical"
-            android:clickable="true">
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -76,15 +85,17 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="16dp"
+        android:clickable="true"
+        android:background="@drawable/ripple"
         android:elevation="4dp"
+        android:focusable="true"
         android:padding="8dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:focusable="true"
             android:orientation="vertical"
-            android:clickable="true">
+            >
 
             <TextView
                 android:layout_width="match_parent"

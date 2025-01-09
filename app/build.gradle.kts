@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
 }
 
 android {
@@ -38,6 +39,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -53,6 +55,8 @@ dependencies {
 
     implementation ("androidx.core:core-ktx:1.13.1")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+    implementation ("androidx.fragment:fragment-ktx:1.6.1")
+    implementation ("androidx.activity:activity-ktx:1.4.0")
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)

@@ -8,5 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="warm_sand">#FFF59D</color>
-
+    <color name="deep_blue">#1565C0</color>
+    <color name="soft_coral">#FF7043</color>
+    <color name="muted_olive_green">#C5E1A5</color>
+    <color name="pale_peach">#FFCC80</color>
+    <color name="incorrect_bg">#FF80AB</color>
+    <color name="incorrect_txt">#8B0000</color>
+    <color name="correct_bg">#85F089</color>
+    <color name="correct_txt">#006400</color>
 </resources>
