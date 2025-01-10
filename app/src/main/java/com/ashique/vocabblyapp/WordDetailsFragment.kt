@@ -59,7 +59,12 @@ class WordDetailsFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.btnNextWord).setOnClickListener {
             sharedViewModel.loadNextWord()
-            parentFragmentManager.beginTransaction().replace(R.id.gre_fragment_container, WordQuizFragment()).commit()
+            parentFragmentManager.beginTransaction().setCustomAnimations(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            ).replace(R.id.gre_fragment_container, WordQuizFragment()).commit()
         }
     }
 

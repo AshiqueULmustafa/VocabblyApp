@@ -83,18 +83,17 @@
             android:text="@string/demo_option2"
             />
         <TextView
+            android:id="@+id/word_option2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/word_boxes"
-            android:gravity="start|center_vertical"
+            android:layout_marginTop="16dp"
             android:background="@drawable/ripple"
             android:clickable="true"
+            android:gravity="start|center_vertical"
             android:paddingStart="16dp"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:id="@+id/word_option2"
-            android:layout_marginTop="16dp"
             android:text="@string/demo_option3"
-            />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/word_boxes"

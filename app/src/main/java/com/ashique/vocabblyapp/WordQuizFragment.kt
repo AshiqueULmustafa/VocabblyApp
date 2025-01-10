@@ -36,7 +36,8 @@ class WordQuizFragment : Fragment() {
 
         sharedViewModel.wordData.observe(viewLifecycleOwner) { word ->
             view.findViewById<TextView>(R.id.word).text = word.word
-            val options = listOf(word.meaning[0], word.options[0], word.options[1], word.options[2])
+            val randomIndex = (0..1).random()
+            val options = listOf(word.meaning[randomIndex], word.options[0], word.options[1], word.options[2])
             val shuffledOptions = options.shuffled()
             view.findViewById<TextView>(R.id.word_option4).text = shuffledOptions[0]
             view.findViewById<TextView>(R.id.word_option1).text = shuffledOptions[1]
@@ -45,33 +46,60 @@ class WordQuizFragment : Fragment() {
         }
 
         view.findViewById<TextView>(R.id.word_option1).setOnClickListener {
+            val meanings = sharedViewModel.wordData.value?.meaning
             val opt = view.findViewById<TextView>(R.id.word_option1).text
             var status = 0
-            if( view.findViewById<TextView>(R.id.word_option1).text == sharedViewModel.wordData.value?.meaning?.get(0)) {
+            if(meanings?.contains(opt) == true) {
                 status = 1
             }
-            parentFragmentManager.beginTransaction().replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
+            parentFragmentManager.beginTransaction().setCustomAnimations(
+                R.anim.slide_in_top,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            ).replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
         }
         view.findViewById<TextView>(R.id.word_option2).setOnClickListener {
+            val meanings = sharedViewModel.wordData.value?.meaning
+            val opt = view.findViewById<TextView>(R.id.word_option2).text
             var status = 0
-            if(view.findViewById<TextView>(R.id.word_option2).text == sharedViewModel.wordData.value?.meaning?.get(0)) {
+            if(meanings?.contains(opt) == true) {
                 status = 1
             }
-            parentFragmentManager.beginTransaction().replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
+            parentFragmentManager.beginTransaction().setCustomAnimations(
+                R.anim.slide_in_top,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            ).replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
         }
         view.findViewById<TextView>(R.id.word_option3).setOnClickListener {
+            val meanings = sharedViewModel.wordData.value?.meaning
+            val opt = view.findViewById<TextView>(R.id.word_option3).text
             var status = 0
-            if(view.findViewById<TextView>(R.id.word_option3).text == sharedViewModel.wordData.value?.meaning?.get(0)) {
+            if(meanings?.contains(opt) == true) {
                 status = 1
             }
-            parentFragmentManager.beginTransaction().replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
+            parentFragmentManager.beginTransaction().setCustomAnimations(
+                R.anim.slide_in_top,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            ).replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
         }
         view.findViewById<TextView>(R.id.word_option4).setOnClickListener {
+            val meanings = sharedViewModel.wordData.value?.meaning
+            val opt = view.findViewById<TextView>(R.id.word_option4).text
             var status = 0
-            if(view.findViewById<TextView>(R.id.word_option4).text == sharedViewModel.wordData.value?.meaning?.get(0)) {
+            if(meanings?.contains(opt) == true) {
                 status = 1
             }
-            parentFragmentManager.beginTransaction().replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
+            parentFragmentManager.beginTransaction().setCustomAnimations(
+                R.anim.slide_in_top,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            ).replace(R.id.gre_fragment_container, WordDetailsFragment.newInstance(status)).commit()
         }
 
     }
